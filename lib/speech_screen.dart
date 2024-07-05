@@ -24,6 +24,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Image.asset('assets/note.png'),
         centerTitle: true,
         backgroundColor: appBarColor,
         title: const Text(
@@ -36,15 +37,18 @@ class _SpeechScreenState extends State<SpeechScreen> {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-        margin: const EdgeInsets.only(bottom: 150),
-        color: Colors.red,
-        child:  Text(
-          text,
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black),
+      body: SingleChildScrollView(
+        
+        child: Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          margin: const EdgeInsets.only(bottom: 150),
+          color: Colors.white60,
+          child:  Text(
+            text,
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black),
+          ),
         ),
       ),
       floatingActionButton: floatingButton(),
